@@ -1,0 +1,48 @@
+
+<h3>{{message | uppercase}}</h3>
+<h3>{{message1 | lowercase}}</h3>
+<h3>{{myDate|date:'mediumDate'}}</h3>
+<h3>{{myDate|date:'shortDate'}}</h3>
+<h3>{{myDate|date:'medium'}}</h3>
+<h3>{{salary|currency:'USD'}}</h3>
+<h3>{{salary|currency:'INR'}}</h3>
+
+<h5>{{setp|number:'1.1-1'}}</h5>
+<h5>{{setp|number:'2.0-0'}}</h5>
+
+<h4>{{shareValue|percent}}</h4>
+
+<hr/>
+    <h2>SEARCH EMPLOYEE DETAILS</h2>
+    <form >
+        <input type="text" [(ngModel)]="searchEmployee" name="search"><br/>
+    </form>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col" (click)="sortBasedEid()">EID</th>
+        <th scope="col">ENAME</th>
+        <th scope="col">ESALARY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let objectR of objectRef | efilter:searchEmployee">
+        <td>{{objectR.id}}</td>
+        <td>{{objectR.name}}</td>
+        <td>{{objectR.salary}}</td>
+      </tr>
+       
+    </tbody>
+  </table>
+ 
+<hr/>
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,10 @@
+.class1{
+    width:800px;
+    height: 500px;
+    background-color: aqua;
+    color:red;
+    border:1px solid black;
+    margin-left:300px;
+    padding-left:20px;
+    padding-top:20px;
+}
